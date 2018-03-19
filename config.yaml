@@ -24,6 +24,9 @@ dotfiles:
   f_nanorc:
     dst: ~/.nanorc
     src: nanorc
+  f_treestyletab.css:
+    dst: ~/.config/treestyletab.css
+    src: config/treestyletab.css
   f_userchrome.css:
     dst: ~/.mozilla/firefox/hun1lqus.default/chrome/userChrome.css
     src: mozilla/firefox/hun1lqus.default/chrome/userChrome.css
@@ -46,3 +49,4 @@ profiles:
     - f_greenclip.cfg
     - f_i3_config
     - f_bashrc
+    - f_treestyletab.css
