@@ -9,9 +9,18 @@ dotfiles:
   d_config:
     dst: ~/.config
     src: config
+  f_bashrc:
+    dst: ~/.bashrc
+    src: bashrc
   f_gitconfig:
     dst: ~/.gitconfig
     src: gitconfig
+  f_greenclip.cfg:
+    dst: ~/.config/greenclip.cfg
+    src: config/greenclip.cfg
+  f_i3_config:
+    dst: ~/.config/i3/config
+    src: config/i3/config
   f_nanorc:
     dst: ~/.nanorc
     src: nanorc
@@ -34,3 +43,6 @@ profiles:
     - f_nanorc
     - f_xinitrc
     - f_gitconfig
+    - f_greenclip.cfg
+    - f_i3_config
+    - f_bashrc
