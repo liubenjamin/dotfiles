@@ -109,13 +109,15 @@ background-color: #c9dcff !important;
 	top: 50%;
 	left: 50%;
 	border-radius: 50%;
-	background: #FFFFFF;
-	animation: pulse 1.2s ease-out 0s infinite;
+	background: #75b0f4;
+	animation: pulse 2s ease-out 0s infinite;
 	z-index: -1;
 	opacity: 0;
 }
 
 /* Adjust style for tab that is muted. */
+/* alt bg: #c9ffbf */
 .tab.muted {
 	opacity: .4;
+        background: #b2b2b2
 }

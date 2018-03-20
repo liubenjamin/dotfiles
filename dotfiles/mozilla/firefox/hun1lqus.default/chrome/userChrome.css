@@ -16,11 +16,7 @@
 #identity-box {
 	padding-inline-start: 2px !important;
 }
-/* Center URL */
-#urlbar .urlbar-input-box {
-	text-align: center;
-	margin-bottom: 1px;
-}
+
 /* Bookmark padding */
 toolbarbutton.bookmark-item:not(.subviewbutton) {
 	padding: 1px 6px !important;
