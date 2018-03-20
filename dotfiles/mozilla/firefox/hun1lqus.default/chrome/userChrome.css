@@ -6,10 +6,6 @@
 	visibility: collapse;
 }
 
-
-
-
-
 /* ##### URL BAR ########################################## */
 
 /* Hide (i) in URL bar */
@@ -19,10 +15,6 @@
 /* Adjust lock icon to be closer to edge */
 #identity-box {
 	padding-inline-start: 2px !important;
-}
-/* Custom bindings.xml in same folder as userChrome, for simple URL */
-#urlbar {
-	-moz-binding: url("bindings.xml#urlbar") !important;
 }
 /* Center URL */
 #urlbar .urlbar-input-box {
@@ -38,10 +30,6 @@ toolbarbutton.bookmark-item:not(.subviewbutton) {
 	display: none;
 }
 
-
-
-
-
 /* ##### SIDEBAR ########################################## */
 
 /* Sidebar min and max width removal */
@@ -49,7 +37,6 @@ toolbarbutton.bookmark-item:not(.subviewbutton) {
 	max-width: none !important;
 	min-width: 0px !important;
 }
-
 
 /* Remove below if not using TreeStyleTab extension */
 
