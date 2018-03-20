@@ -45,7 +45,7 @@ bindsym $mod+shift+s exec maim -s | ~/.bin/0x0.sh | xclip -selection clipboard &
 bindsym $mod+g exec rofi -modi "clipboard:greenclip print" -show clipboard -run-command '{cmd}'
 bindsym $mod+Shift+Return workspace 2; exec urxvt -e nano ~/.config/i3/config
 
-bindsym $mod+Shift+BackSpace exec i3lock-fancy -p -f Bitstream-Vera-Sans-Mono
+bindsym $mod+Shift+BackSpace exec pulseaudio-ctl down 100 && i3lock-fancy -f Bitstream-Vera-Sans-Mono -- scrot -z && pulseaudio-ctl up 100
 
 ## volume
 bindsym $mod+c exec pulseaudio-ctl up
