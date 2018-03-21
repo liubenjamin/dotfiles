@@ -9,12 +9,36 @@ dotfiles:
   d_config:
     dst: ~/.config
     src: config
+<<<<<<< HEAD
   f_grub:
     dst: /etc/default/grub
     src: etc/default/grub
   f_nanorc:
     dst: ~/.nanorc
     src: nanorc
+=======
+  f_bashrc:
+    dst: ~/.bashrc
+    src: bashrc
+  f_gitconfig:
+    dst: ~/.gitconfig
+    src: gitconfig
+  f_greenclip.cfg:
+    dst: ~/.config/greenclip.cfg
+    src: config/greenclip.cfg
+  f_grub:
+    dst: /etc/default/grub
+    src: etc/default/grub
+  f_i3_config:
+    dst: ~/.config/i3/config
+    src: config/i3/config
+  f_nanorc:
+    dst: ~/.nanorc
+    src: nanorc
+  f_treestyletab.css:
+    dst: ~/.config/treestyletab.css
+    src: config/treestyletab.css
+>>>>>>> a7d03dc04e6b9b896885a4d2718fcd78eb1bfa9f
   f_userchrome.css:
     dst: ~/.mozilla/firefox/hun1lqus.default/chrome/userChrome.css
     src: mozilla/firefox/hun1lqus.default/chrome/userChrome.css
@@ -28,9 +52,22 @@ profiles:
   arch:
     dotfiles:
     - d_config
+<<<<<<< HEAD
     - d_bin
     - f_userchrome.css
     - f_xresources
     - f_nanorc
     - f_xinitrc
+=======
+    - f_xresources
+    - f_userchrome.css
+    - d_bin
+    - f_nanorc
+    - f_xinitrc
+    - f_gitconfig
+    - f_greenclip.cfg
+    - f_i3_config
+    - f_bashrc
+    - f_treestyletab.css
+>>>>>>> a7d03dc04e6b9b896885a4d2718fcd78eb1bfa9f
     - f_grub
