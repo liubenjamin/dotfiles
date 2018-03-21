@@ -1,0 +1,36 @@
+config:
+  backup: true
+  create: true
+  dotpath: dotfiles
+dotfiles:
+  d_bin:
+    dst: ~/.bin
+    src: bin
+  d_config:
+    dst: ~/.config
+    src: config
+  f_grub:
+    dst: /etc/default/grub
+    src: etc/default/grub
+  f_nanorc:
+    dst: ~/.nanorc
+    src: nanorc
+  f_userchrome.css:
+    dst: ~/.mozilla/firefox/hun1lqus.default/chrome/userChrome.css
+    src: mozilla/firefox/hun1lqus.default/chrome/userChrome.css
+  f_xinitrc:
+    dst: ~/.xinitrc
+    src: xinitrc
+  f_xresources:
+    dst: ~/.Xresources
+    src: Xresources
+profiles:
+  arch:
+    dotfiles:
+    - d_config
+    - d_bin
+    - f_userchrome.css
+    - f_xresources
+    - f_nanorc
+    - f_xinitrc
+    - f_grub
