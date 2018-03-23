@@ -23,7 +23,7 @@ exec compton
 exec --no-startup-id i3-msg 'workspace 10; exec spotify; exec sleep 10 && pulseaudio-ctl mute && playerctl -p spotify play'
 exec --no-startup-id i3-msg 'workspace 10; exec urxvt -e cava'
 
-bindsym $mod+space exec playerctl play-pause
+bindsym $mod+slash exec playerctl play-pause
 bindsym $mod+less exec playerctl previous
 bindsym $mod+greater exec playerctl next
 
@@ -80,7 +80,7 @@ floating_modifier $mod
 bindsym $mod+Return workspace 2; exec $TERMINAL
 
 # kill focused window
-bindsym $mod+Shift+q kill
+bindsym $mod+q kill
 
 # start dmenu (a program launcher)
 # bindsym $mod+d exec dmenu_run
@@ -131,7 +131,7 @@ bindsym $mod+e layout toggle split
 bindsym $mod+Shift+space floating toggle
 
 # change focus between tiling / floating windows
-# bindsym $mod+space focus mode_toggle
+bindsym $mod+space focus mode_toggle
 
 # focus the parent container
 bindsym $mod+a focus parent

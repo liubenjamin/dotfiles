@@ -1,16 +1,9 @@
 # GRUB boot loader configuration
 
 GRUB_DEFAULT=0
-<<<<<<< HEAD
 GRUB_TIMEOUT=3
 GRUB_DISTRIBUTOR="Arch"
 GRUB_CMDLINE_LINUX_DEFAULT="quiet loglevel=3 gfxpayload=text rd.systemd.show_status=auto rd.udev.log_priority=3 vt.global_cursor_default=0"
-=======
-GRUB_TIMEOUT=0
-GRUB_RECORDFAIL_TIMEOUT=$GRUB_TIMEOUT
-GRUB_DISTRIBUTOR="Arch"
-GRUB_CMDLINE_LINUX_DEFAULT="quiet loglevel=3 gfxpayload=text rd.systemd.show_status=false rd.udev.log-priority=3"
->>>>>>> a7d03dc04e6b9b896885a4d2718fcd78eb1bfa9f
 GRUB_CMDLINE_LINUX=""
 
 # Preload both GPT and MBR modules so that they are not missed
@@ -20,11 +13,7 @@ GRUB_PRELOAD_MODULES="part_gpt part_msdos"
 #GRUB_ENABLE_CRYPTODISK=y
 
 # Uncomment to enable Hidden Menu, and optionally hide the timeout count
-<<<<<<< HEAD
 #GRUB_HIDDEN_TIMEOUT=5
-=======
-#GRUB_HIDDEN_TIMEOUT=0
->>>>>>> a7d03dc04e6b9b896885a4d2718fcd78eb1bfa9f
 #GRUB_HIDDEN_TIMEOUT_QUIET=true
 
 # Uncomment to use basic console
@@ -41,19 +30,13 @@ GRUB_GFXMODE=auto
 # Uncomment to allow the kernel use the same resolution used by grub
 GRUB_GFXPAYLOAD_LINUX=keep
 
-<<<<<<< HEAD
 # Uncomment if you want GRUB to pass to the Linux kernel the old parameter
 # format "root=/dev/xxx" instead of "root=/dev/disk/by-uuid/xxx"
-=======
-# Uncomment if you want GRUB to pass to the Linux kernel the old parameter 
-# format "root=/dev/xxx" instead of "root=/dev/disk/by-uuid/xxx" 
->>>>>>> a7d03dc04e6b9b896885a4d2718fcd78eb1bfa9f
 #GRUB_DISABLE_LINUX_UUID=true
 
 # Uncomment to disable generation of recovery mode menu entries
 GRUB_DISABLE_RECOVERY=true
 
-<<<<<<< HEAD
 # Uncomment and set to the desired menu colors.  Used by normal and wallpaper
 # modes only.  Entries specified as foreground/background.
 GRUB_COLOR_NORMAL="light-blue/black"
@@ -61,15 +44,6 @@ GRUB_COLOR_HIGHLIGHT="light-cyan/blue"
 
 # Uncomment one of them for the gfx desired, a image background or a gfxtheme
 #GRUB_BACKGROUND="/boot/grub/image"
-=======
-# Uncomment and set to the desired menu colors.  Used by normal and wallpaper 
-# modes only.  Entries specified as foreground/background.
-#GRUB_COLOR_NORMAL="light-blue/black"
-#GRUB_COLOR_HIGHLIGHT="light-cyan/blue"
-
-# Uncomment one of them for the gfx desired, a image background or a gfxtheme
-#GRUB_BACKGROUND="/path/to/wallpaper"
->>>>>>> a7d03dc04e6b9b896885a4d2718fcd78eb1bfa9f
 #GRUB_THEME="/path/to/gfxtheme"
 
 # Uncomment to get a beep at GRUB start

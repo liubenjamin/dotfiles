@@ -1,8 +1,7 @@
 [Added Associations]
 text/plain=sublime-text2.desktop;
 application/x-shellscript=vim.desktop;
-<<<<<<< HEAD
 text/css=sublime-text2.desktop;
 application/x-xpinstall=sublime-text2.desktop;
-=======
->>>>>>> a7d03dc04e6b9b896885a4d2718fcd78eb1bfa9f
+application/octet-stream=sublime-text2.desktop;
+application/x-yaml=sublime-text2.desktop;
