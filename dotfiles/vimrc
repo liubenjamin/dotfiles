@@ -1,0 +1,8 @@
+set number
+set ruler
+syntax enable
+set showcmd
+set cursorline
+set showmatch
+set incsearch
+set hlsearch

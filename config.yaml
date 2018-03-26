@@ -24,6 +24,9 @@ dotfiles:
   f_userchrome.css:
     dst: ~/.mozilla/firefox/hun1lqus.default/chrome/userChrome.css
     src: mozilla/firefox/hun1lqus.default/chrome/userChrome.css
+  f_vimrc:
+    dst: ~/.vimrc
+    src: vimrc
   f_xdefaults:
     dst: ~/.Xdefaults
     src: Xdefaults
@@ -46,3 +49,4 @@ profiles:
     - f_xinitrc
     - f_bashrc
     - f_xdefaults
+    - f_vimrc
