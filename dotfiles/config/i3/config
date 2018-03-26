@@ -8,7 +8,7 @@
 gaps inner 20
 gaps outer 10
 
-exec_always --no-startup-id workspace 10; exec ~/.bin/gifbg.sh ~/.config/wall.gif
+exec --no-startup-id i3-msg 'workspace 10; exec ~/.bin/gifbg.sh ~/.config/wall.gif && sleep 3'
 
 exec polybar example
 
@@ -22,7 +22,9 @@ assign [class="Firefox"] workspace 1
 
 exec compton
 
-exec_always i3-msg 'workspace 10; split v; exec spotify & pulseaudio-ctl mute && sleep 1 && urxvt -e cava & sleep 2 && i3-msg split h & sleep 5 && playerctl -p spotify play'
+#exec i3-msg 'workspace 10; split v; exec sleep 1'
+
+exec i3-msg 'workspace 10; split v; exec spotify & sleep 1 && pulseaudio-ctl mute && sleep 2 && urxvt -e cava & sleep 5 && i3-msg split h & sleep 5 && playerctl -p spotify play'
 
 bindsym $mod+slash exec playerctl play-pause
 bindsym $mod+less exec playerctl previous
