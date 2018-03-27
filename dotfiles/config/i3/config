@@ -8,11 +8,13 @@
 gaps inner 20
 gaps outer 10
 
-exec --no-startup-id i3-msg 'workspace 10; exec ~/.bin/gifbg.sh ~/.config/wall.gif && sleep 3'
+exec pulseaudio-ctl mute
 
 exec polybar example
 
-exec_always ~/.config/dunst/launch.sh
+exec feh --bg-scale ~/.config/wall.jpg
+
+exec ~/.config/dunst/launch.sh
 
 exec greenclip daemon
 bindsym $mod+Tab move workspace to output right
@@ -21,10 +23,9 @@ bindsym $mod+F workspace 1; exec firefox
 assign [class="Firefox"] workspace 1
 
 exec compton
-
+#exec i3-msg 'workspace 10; exec sleep 1 && bash ~/.bin/gifbg.sh ~/.config/wall.gif && sleep 2; split v; exec sleep 3 && spotify & sleep 2 && sleep 2 && urxvt -e cava & sleep 5 && i3-msg split h & sleep 5 && playerctl -p spotify play'
 #exec i3-msg 'workspace 10; split v; exec sleep 1'
-
-exec i3-msg 'workspace 10; split v; exec spotify & sleep 1 && pulseaudio-ctl mute && sleep 2 && urxvt -e cava & sleep 5 && i3-msg split h & sleep 5 && playerctl -p spotify play'
+exec i3-msg 'workspace 10; split v; exec spotify & sleep 1 && urxvt -e cava & sleep 2 && i3-msg split h & sleep 5 && playerctl -p spotify play'
 
 bindsym $mod+slash exec playerctl play-pause
 bindsym $mod+less exec playerctl previous
@@ -59,6 +60,7 @@ bindsym $mod+Shift+BackSpace exec pulseaudio-ctl down 100 && i3lock-fancy -f Bit
 bindsym $mod+c exec pulseaudio-ctl up
 bindsym $mod+x exec pulseaudio-ctl down
 bindsym $mod+m exec pulseaudio-ctl mute
+
 
 # i3 config file (v4)
 #
