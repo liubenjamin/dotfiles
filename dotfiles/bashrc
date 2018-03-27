@@ -11,5 +11,5 @@ PS1='[\u@\h \W]\$ '
 alias grep="grep --ignore-case --color"
 alias javarun="~/.bin/java.sh"
 alias usaco="~/.bin/usaco.sh"
-alias shutdown="kill $(pgrep spotify) && reboot)"
-alias reboot="kill $(pgrep spotify) && reboot)"
+alias shutdown="pkill spotify && shutdown now"
+alias reboot="pkill spotify && reboot"
