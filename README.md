@@ -1,5 +1,5 @@
-# My dotfiles for Arch Linux
 
+# My dotfiles for Arch Linux
 ## Installation
  These dotfiles can be deployed easily using [dotdrop](https://github.com/deadc0de6/dotdrop) like this: 
  
@@ -13,6 +13,5 @@
  - terminal: urxvt
  - notifications: dunst
  - compositor: compton
- - audio: pulseaudio, pavucontrol
  - screenshot: maim with 0x0.st upload
- - other: neofetch, rofi, greenclip, i3lock-fancy (dual monitors branch), various scripts
+ - other: neofetch, rofi, greenclip, cava, i3lock-fancy (dual monitors branch), various scripts
