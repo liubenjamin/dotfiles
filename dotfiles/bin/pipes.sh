@@ -28,10 +28,10 @@
 VERSION=1.3.0
 
 M=32768  # Bash RANDOM maximum + 1
-p=1      # number of pipes
-f=75     # frame rate
+p=5    # number of pipes
+f=4     # frame rate
 s=13     # probability of straight fitting
-r=2000   # characters limit
+r=8000   # characters limit
 t=0      # iteration counter for -r character limit
 w=80     # terminal size
 h=24
