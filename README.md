@@ -12,6 +12,6 @@
  - bar: polybar
  - terminal: urxvt
  - notifications: dunst
- - compositor: compton
+ - compositor:  [compton patched](https://github.com/tryone144/compton)
  - screenshot: maim with 0x0.st upload
  - other: neofetch, rofi, greenclip, cava, i3lock-fancy (dual monitors branch), various scripts
