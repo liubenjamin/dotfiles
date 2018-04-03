@@ -1,3 +1,5 @@
+/* Paste me in TreeStyleTab extensions options under "Extra style rules" */
+
 /* Hide border on tab bar, force its state to 'scroll', adjust margin-left for width of scrollbar. */
 #tabbar {
 	border: 0;

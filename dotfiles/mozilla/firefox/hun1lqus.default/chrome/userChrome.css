@@ -70,3 +70,6 @@ toolbarbutton.bookmark-item:not(.subviewbutton) {
 #sidebar-box[sidebarcommand="treestyletab_piro_sakura_ne_jp-sidebar-action"]:hover {
 	margin-right: calc((var(--wide-tab-width) - var(--thin-tab-width)) * -1) !important;
 }
+
+/* hide bottom left url preview */
+#appcontent statuspanel{display: none;} 
