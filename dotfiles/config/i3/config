@@ -35,6 +35,7 @@ for_window [class=".*"] border pixel 5
 for_window [class="URxvt"] border pixel 5
 for_window [class="mpv"] border pixel 3
 for_window [class="Firefox"] border pixel 0
+for_window [class="Google-chrome"] border pixel 0
 
 ## colours
 # class                 border    bg        text      indicator   child_border
@@ -123,10 +124,13 @@ bindsym $mod+Shift+Up move up
 bindsym $mod+Shift+Right move right
 
 # split in horizontal orientation
-# bindsym $mod+h split h
+#bindsym $mod+u split h
 
 # split in vertical orientation
-# bindsym $mod+v split v
+#bindsym $mod+i split v
+
+# toggle split
+bindsym $mod+u split toggle
 
 # enter fullscreen mode for the focused container
 #bindsym $mod+f fullscreen toggle
@@ -187,16 +191,16 @@ mode "resize" {
         # Pressing right will grow the window’s width.
         # Pressing up will shrink the window’s height.
         # Pressing down will grow the window’s height.
-        bindsym j resize shrink width 10 px or 10 ppt
-        bindsym k resize grow height 10 px or 10 ppt
-        bindsym l resize shrink height 10 px or 10 ppt
-        bindsym semicolon resize grow width 10 px or 10 ppt
+        bindsym l resize shrink width 10 px or 10 ppt
+        bindsym j resize grow height 10 px or 10 ppt
+        bindsym k resize shrink height 10 px or 10 ppt
+        bindsym h resize grow width 10 px or 10 ppt
 
         # same bindings, but for the arrow keys
-        bindsym Left resize shrink width 10 px or 10 ppt
+        bindsym Right resize shrink width 10 px or 10 ppt
         bindsym Down resize grow height 10 px or 10 ppt
         bindsym Up resize shrink height 10 px or 10 ppt
-        bindsym Right resize grow width 10 px or 10 ppt
+        bindsym Left resize grow width 10 px or 10 ppt
 
         # back to normal: Enter or Escape
         bindsym Return mode "default"
