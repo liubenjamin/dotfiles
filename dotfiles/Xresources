@@ -1,3 +1,36 @@
+
+! basic config
+
+URxvt.font:xft:bitstream vera sans mono:size=9:antialias=true 
+URxvt.scrollBar: false
+URxvt*internalBorder: 50
+
+! transparency
+URxvt*depth: 32
+URxvt*background: rgba:0000/0000/0200/6600
+
+! extensions
+URxvt.perl-ext-common: default,matcher,resize-font
+
+! clickable url
+URxvt.url-launcher: /usr/bin/xdg-open
+URxvt.matcher.button: 1
+
+URxvt.keysym.Control-n: perl:matcher:last
+URxvt.keysym.Control-m: perl:matcher:list
+URxvt.matcher.rend.0: Uline Bold fg14
+
+! change font size
+URxvt.iso14755: false
+URxvt.iso14755_52: false
+
+URxvt.keysym.Shift-Down:  resize-font:smaller
+URxvt.keysym.Shift-Up:    resize-font:bigger
+
+! copy paste with c-s-c/v
+URxvt.keysym.Shift-Control-V: eval:paste_clipboard
+URxvt.keysym.Shift-Control-C: eval:selection_to_clipboard
+
 ! Base16 Dracula
 ! Scheme: Mike Barkmin (http://github.com/mikebarkmin) based on Dracula Theme (http://github.com/dracula)
 
@@ -52,48 +85,3 @@
 *color19:      base02
 *color20:      base04
 *color21:      base06
-
-URxvt.scrollBar: false
-URxvt.font:xft:bitstream vera sans mono:size=9:antialias=true
-URxvt*internalBorder: 50
-
-URxvt.perl-ext-common: default,matcher
-URxvt.url-launcher: /usr/bin/xdg-open
-URxvt.matcher.button: 1
-
-! special
-*.foreground:   #f2efed
-*.background:   #282828
-*.cursorColor:  #c8ccd4
-
-! black
-*.color0:       #32302f 
-*.color8:       #928374
-
-! red
-*.color1:       #d64d4d
-*.color9:       #fb4934
-
-! green
-*.color2:       #00b159
-*.color10:      #00b159
-
-! yellow
-*.color3:       #f18e38
-*.color11:      #cc9c00
-
-! blue
-*.color4:       #428bca 
-*.color12:      #428bca
-
-! magenta
-*.color5:       #B85C8A
-*.color13:      #B85C8A
-
-! cyan
-*.color6:       #669c9c
-*.color14:      #669c9c
-
-! white
-*.color7:       #a89984 
-*.color15:      #f2efed
