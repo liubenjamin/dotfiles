@@ -27,9 +27,6 @@ dotfiles:
   f_vimrc:
     dst: ~/.vimrc
     src: vimrc
-  f_xdefaults:
-    dst: ~/.Xdefaults
-    src: Xdefaults
   f_xinitrc:
     dst: ~/.xinitrc
     src: xinitrc
@@ -48,5 +45,4 @@ profiles:
     - f_nanorc
     - f_xinitrc
     - f_bashrc
-    - f_xdefaults
     - f_vimrc
