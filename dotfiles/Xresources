@@ -31,6 +31,24 @@ URxvt.keysym.Shift-Up:    resize-font:bigger
 URxvt.keysym.Shift-Control-V: eval:paste_clipboard
 URxvt.keysym.Shift-Control-C: eval:selection_to_clipboard
 
+
+
+! rofi
+rofi.modi: run
+rofi.separator-style: solid
+rofi.show-icons: true
+rofi.drun-icon-theme: Paper
+rofi.sidebar-mode:    true
+rofi.padding:         7
+rofi.bw:              0
+rofi.scrollbar-width: 0
+rofi.line-margin:     0
+rofi.lines: 10
+rofi.terminal: urxvt
+rofi.case-sensitive: false
+
+
+
 ! Base16 Dracula
 ! Scheme: Mike Barkmin (http://github.com/mikebarkmin) based on Dracula Theme (http://github.com/dracula)
 
