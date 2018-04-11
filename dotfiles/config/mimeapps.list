@@ -5,3 +5,6 @@ text/css=sublime-text2.desktop;
 application/x-xpinstall=sublime-text2.desktop;
 application/octet-stream=sublime-text2.desktop;
 application/x-yaml=sublime-text2.desktop;
+image/jpeg=sxiv.desktop;
+text/x-scheme=sublime-text2.desktop;
+application/xml=sublime-text2.desktop;firefox.desktop;
