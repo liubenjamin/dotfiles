@@ -34,7 +34,7 @@ URxvt.keysym.Shift-Control-C: eval:selection_to_clipboard
 
 
 ! rofi
-rofi.modi: run
+rofi.modi: run,window
 rofi.separator-style: solid
 rofi.show-icons: true
 rofi.drun-icon-theme: Paper
@@ -49,25 +49,25 @@ rofi.case-sensitive: false
 
 
 
-! Base16 Dracula
-! Scheme: Mike Barkmin (http://github.com/mikebarkmin) based on Dracula Theme (http://github.com/dracula)
+! Base16 Flat
+! Scheme: Chris Kempson (http://chriskempson.com)
 
-#define base00 #282936
-#define base01 #3a3c4e
-#define base02 #4d4f68
-#define base03 #626483
-#define base04 #62d6e8
-#define base05 #e9e9f4
-#define base06 #f1f2f8
-#define base07 #f7f7fb
-#define base08 #ea51b2
-#define base09 #b45bcf
-#define base0A #00f769
-#define base0B #ebff87
-#define base0C #a1efe4
-#define base0D #62d6e8
-#define base0E #b45bcf
-#define base0F #00f769
+#define base00 #2c3e50
+#define base01 #34495e
+#define base02 #7f8c8d
+#define base03 #95a5a6
+#define base04 #bdc3c7
+#define base05 #e0e0e0
+#define base06 #f5f5f5
+#define base07 #ecf0f1
+#define base08 #e74c3c
+#define base09 #e67e22
+#define base0A #f1c40f
+#define base0B #2ecc71
+#define base0C #1abc9c
+#define base0D #3498db
+#define base0E #9b59b6
+#define base0F #be643c
 
 *foreground:   base05
 #ifdef background_opacity
@@ -103,3 +103,4 @@ rofi.case-sensitive: false
 *color19:      base02
 *color20:      base04
 *color21:      base06
+
