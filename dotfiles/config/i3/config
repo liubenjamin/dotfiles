@@ -9,7 +9,7 @@ gaps inner 20
 gaps outer 10
 exec split v
 
-exec polybar example
+exec polybar -c ~/.config/polybar/config.transparent i3
 
 exec feh --bg-scale ~/.config/wall.jpg
 
@@ -19,11 +19,12 @@ exec greenclip daemon
 bindsym $mod+Tab move workspace to output right
 bindsym $mod+F workspace 1; exec firefox
 
+exec setxkbmap -option caps:swapescape
+
 assign [class="Firefox"] workspace 1
 
 exec allow_rgb10_configs=false compton --config ~/.config/compton.conf
-#exec i3-msg 'workspace 10; exec sleep 1 && bash ~/.bin/gifbg.sh ~/.config/wall.gif && sleep 2; split v; exec sleep 3 && spotify & sleep 2 && sleep 2 && urxvt -e cava & sleep 5 && i3-msg split h & sleep 5 && playerctl -p spotify play'
-#exec i3-msg 'workspace 10; split v; exec sleep 1'
+
 exec i3-msg 'workspace 10; split v; exec spotify & sleep 5 && urxvt -e cava & sleep 8 && i3-msg split h & sleep 5 && pulseaudio-ctl mute && playerctl -p spotify play'
 
 bindsym $mod+slash exec playerctl play-pause
