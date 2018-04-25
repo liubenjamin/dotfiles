@@ -6,3 +6,5 @@ set cursorline
 set showmatch
 set incsearch
 set hlsearch
+set mouse=a
+:imap kj <Esc>
