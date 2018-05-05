@@ -54,7 +54,7 @@ bindsym $mod+s exec maim -s | xclip -selection clipboard -t image/png && notify-
 bindsym $mod+shift+s exec maim -s | ~/.bin/0x0.sh | xclip -selection clipboard && notify-send "Uploaded to 0x0.st"
 
 bindsym $mod+space exec rofi -modi "clipboard:greenclip print" -show clipboard -run-command '{cmd}'
-bindsym $mod+Shift+Return workspace 2; exec urxvt -e vim ~/.config/i3/config
+bindsym $mod+Shift+Return workspace 2; exec urxvt -e nvim ~/.config/i3/config
 
 bindsym $mod+Shift+BackSpace exec pulseaudio-ctl down 100 && i3lock-fancy -f Bitstream-Vera-Sans-Mono -- scrot -z && pulseaudio-ctl up 100
 
