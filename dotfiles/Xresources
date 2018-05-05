@@ -7,7 +7,7 @@ URxvt*internalBorder: 50
 
 ! transparency
 URxvt*depth: 32
-URxvt*background: rgba:0000/0000/0200/6600
+URxvt*background: rgba:0000/0000/0200/4800
 
 ! extensions
 URxvt.perl-ext-common: default,matcher,resize-font
@@ -24,8 +24,10 @@ URxvt.matcher.rend.0: Uline Bold fg14
 URxvt.iso14755: false
 URxvt.iso14755_52: false
 
-URxvt.keysym.Shift-Down:  resize-font:smaller
-URxvt.keysym.Shift-Up:    resize-font:bigger
+URxvt.keysym.C-j: resize-font:smaller
+URxvt.keysym.C-k: resize-font:bigger
+URxvt.keysym.C-h: resize-font:reset
+URxvt.keysym.C-i: resize-font:show
 
 ! copy paste with c-s-c/v
 URxvt.keysym.Shift-Control-V: eval:paste_clipboard
@@ -35,7 +37,7 @@ URxvt.keysym.Shift-Control-C: eval:selection_to_clipboard
 
 ! rofi
 rofi.modi: run,window
-rofi.separator-style: solid
+rofi.separator-style: none
 rofi.show-icons: true
 rofi.drun-icon-theme: Paper
 rofi.sidebar-mode:    true
@@ -43,11 +45,13 @@ rofi.padding:         7
 rofi.bw:              0
 rofi.scrollbar-width: 0
 rofi.line-margin:     0
-rofi.lines: 10
 rofi.terminal: urxvt
 rofi.case-sensitive: false
-
-
+rofi.font:		Bitstream Vera Sans Mono 14
+rofi.color-enabled:	true
+rofi.fullscreen:	false
+rofi.lines:		5
+rofi.hide-scrollbar:	true
 
 ! Base16 Flat
 ! Scheme: Chris Kempson (http://chriskempson.com)
