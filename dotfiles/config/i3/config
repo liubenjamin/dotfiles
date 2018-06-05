@@ -5,15 +5,31 @@
 # this file and re-run i3-config-wizard(1).
 #
 
+set $monitor HDMI-1
+set $monitor2 DVI-I-1
+
+workspace 1 output $monitor
+workspace 2 output $monitor
+workspace 3 output $monitor
+workspace 4 output $monitor
+workspace 5 output $monitor
+workspace 6 output $monitor2
+workspace 7 output $monitor2
+workspace 8 output $monitor2
+workspace 9 output $monitor2
+workspace 0 output $monitor2
+
 gaps inner 20
 gaps outer 5
 exec split v
 
-exec polybar -c ~/.config/polybar/config.transparent i3
+exec polybar -c ~/.config/polybar/config.rect main
 
 exec feh --bg-scale ~/.config/wall.jpg
 
 exec ~/.config/dunst/launch.sh
+
+exec bash ~/.screenlayout/config.sh
 
 exec greenclip daemon
 bindsym $mod+Tab move workspace to output right
@@ -23,7 +39,7 @@ exec setxkbmap -option caps:swapescape
 
 assign [class="Firefox"] workspace 1
 
-exec allow_rgb10_configs=false compton --config ~/.config/compton.conf
+# exec allow_rgb10_configs=false compton --config ~/.config/compton.conf
 
 exec i3-msg 'workspace 10; split v; exec spotify & sleep 5 && urxvt -e cava & sleep 8 && i3-msg split h & sleep 5 && pulseaudio-ctl mute && playerctl -p spotify play'
 exec i3-msg 'workspcae 10; split h'
@@ -51,13 +67,14 @@ set $TERMINAL --no-startup-id urxvt --perl-lib ~/.config/urxvt-ext/
 bindsym $mod+R exec rofi -show run
 bindsym $mod+s exec maim -s | xclip -selection clipboard -t image/png && notify-send "Copied to clipboard"
 
-bindsym $mod+shift+s exec maim -s | ~/.bin/0x0.sh | xclip -selection clipboard && notify-send "Uploaded to 0x0.st"
+bindsym $mod+shift+s exec maim -s | ~/.scripts/0x0.sh | xclip -selection clipboard && notify-send "Uploaded to 0x0.st"
 
 bindsym $mod+space exec rofi -modi "clipboard:greenclip print" -show clipboard -run-command '{cmd}'
 bindsym $mod+Shift+Return workspace 2; exec urxvt -e nvim ~/.config/i3/config
 
 bindsym $mod+Shift+BackSpace exec pulseaudio-ctl down 100 && i3lock-fancy -f Bitstream-Vera-Sans-Mono -- scrot -z && pulseaudio-ctl up 100
 
+bindsym $mod+d exec pcmanfm 
 ## volume
 bindsym $mod+c exec pulseaudio-ctl up
 bindsym $mod+x exec pulseaudio-ctl down
