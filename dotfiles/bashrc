@@ -9,12 +9,14 @@ alias ls='ls --color=auto'
 PS1='[\u@\h \W]\$ '
 
 alias grep="grep --ignore-case --color"
-alias javarun="~/.bin/java.sh"
-alias usaco="~/.bin/usaco.sh"
+alias javarun="~/.scripts/java.sh"
+alias usaco="~/.scripts/usaco.sh"
 alias shutdown="pkill spotify && shutdown now"
 alias reboot="pkill spotify && reboot"
-alias sl="bash ~/.bin/sl.sh"
+alias sl="bash ~/.scripts/sl.sh"
 alias dotdrop="~/dotfiles/dotdrop.sh"
 
 alias ix="curl -n -F 'f:1=<-' ix.io"
-alias rmix="bash ~/.bin/rmix"
+alias rmix="bash ~/.scripts/rmix"
+
+alias vim="nvim"
