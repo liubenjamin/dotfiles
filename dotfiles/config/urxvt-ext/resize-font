@@ -49,9 +49,9 @@ sub on_init {
    my ($self) = @_;
    my $commands = {
      "smaller" => "C-j",
-     "bigger"  => "C-k",
+     "bigger"  => "C-u",
      "reset"   => "C-h",
-     "show"    => "C-i",
+     "show"    => "C-y",
    };
    bind_hotkeys($self, $commands);
 
