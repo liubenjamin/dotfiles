@@ -1,3 +1,5 @@
+let mapleader=" "
+
 set number
 set ruler
 syntax enable
@@ -8,3 +10,25 @@ set incsearch
 set hlsearch
 set mouse=a
 :imap kj <Esc>
+
+function! NumberToggle()
+  if(&relativenumber == 1 && &number == 1)
+    set number
+    set norelativenumber
+  elseif (&number == 1 && &relativenumber == 0)
+    set norelativenumber
+    set nonumber
+  else
+    set number
+    set relativenumber
+  endif
+endfunc
+
+" toggle line numbers
+nnoremap <leader>l :call NumberToggle()<CR>
+" join lines without moving cursor
+nnoremap J mzJ`z
+" center easily 
+nnoremap <leader><Space> zz
+
+nnoremap XX ZQ
