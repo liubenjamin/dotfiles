@@ -35,14 +35,11 @@ exec greenclip daemon
 bindsym $mod+Tab move workspace to output right
 bindsym $mod+F workspace 1; exec firefox
 
-exec setxkbmap -option caps:swapescape
-
 assign [class="Firefox"] workspace 1
 
 # exec allow_rgb10_configs=false compton --config ~/.config/compton.conf
 
-exec i3-msg 'workspace 10; split v; exec spotify & sleep 5 && urxvt -e cava & sleep 8 && i3-msg split h & sleep 5 && pulseaudio-ctl mute && playerctl -p spotify play'
-exec i3-msg 'workspcae 10; split h'
+exec i3-msg 'workspace 10; exec spotify && playerctl -p spotify play'
 
 bindsym $mod+slash exec playerctl play-pause
 bindsym $mod+less exec playerctl previous
@@ -85,7 +82,7 @@ bindsym $mod+m exec pulseaudio-ctl mute
 #
 # Please see https://i3wm.org/docs/userguide.html for a complete reference!
 
-set $mod Mod4
+set $mod Mod1 
 
 # Font for window titles. Will also be used by the bar unless a different font
 # is used in the bar {} block below.

@@ -24,9 +24,9 @@ URxvt.matcher.rend.0: Uline Bold fg14
 URxvt.iso14755: false
 URxvt.iso14755_52: false
 
-URxvt.keysym.C-u: resize-font:bigger
-URxvt.keysym.C-j: resize-font:smaller
-URxvt.keysym.C-h: resize-font:reset
+URxvt.keysym.C-h: resize-font:bigger
+URxvt.keysym.C-b: resize-font:smaller
+URxvt.keysym.C-j: resize-font:reset
 URxvt.keysym.C-y: resize-font:show
 
 ! copy paste with c-s-c/v
