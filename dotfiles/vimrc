@@ -32,3 +32,7 @@ nnoremap J mzJ`z
 nnoremap <leader><Space> zz
 
 nnoremap XX ZQ
+
+set clipboard=unnamedplus
+
+command W w !sudo tee "%" > /dev/null
