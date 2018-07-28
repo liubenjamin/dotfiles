@@ -1,3 +1,79 @@
+/* Autohide navigation bar */
+#navigator-toolbox{
+	background:transparent;
+}
+
+#navigator-toolbox > *{
+	background:#999;
+}
+
+#navigator-toolbox {
+    position: relative;
+    height: 10px;
+	transition:.05s linear all;
+    overflow: hidden;
+	opacity:0;
+    margin-bottom: -10px;
+    z-index: 1;
+}
+#navigator-toolbox:hover {
+    height: 40px;
+    margin-bottom: 0px;
+	overflow:extend;
+	opacity:1;
+}
+
+#content-deck{
+    position:relative;
+    z-index: 0;
+}
+
+#titlebar-buttonbox{
+	opacity:0;
+    height: 4px;
+    overflow: hidden;
+	transition:.2s linear all;
+}
+
+#titlebar-buttonbox:hover{
+	opacity:1;
+    height: auto;
+}
+
+/* Move hamburger menu to the left */
+#PanelUI-button,
+#customization-panel-container,
+#customization-panelWrapper .panel-arrow { 
+  -moz-box-ordinal-group: 0 !important;
+#	transform: scale(.8, .8) !important;
+  margin-right: -6px !important;
+	margin-left: -3px !important;
+}
+
+/* Back & Forward buttons */  
+#back-button > .toolbarbutton-icon,
+#forward-button > .toolbarbutton-icon {
+  transform: scale(0, 0) !important;
+  margin-left: -2px !important;
+  margin-right: -2px !important; 
+}
+
+/* Hide various elements */
+/* Menu */
+#appMenu-fxa-container,                    /* Sign in to Sync */
+#appMenu-fxa-container+toolbarseparator,
+/* #appMenuRestoreLastSession, */
+#appMenu-zoom-controls,
+#appMenu-zoom-controls+toolbarseparator,
+#appMenu-edit-controls,
+#appMenu-edit-controls+toolbarseparator,
+#appMenu-library-button,
+#appMenu-customize-button,
+#appMenu-customize-button+toolbarseparator,
+#appMenu-open-file-button,
+#appMenu-save-file-button,
+#appMenu-find-button,
+#appMenu-more-button,
 
 /* ##### TABS TOOLBAR ##################################### */
 
@@ -72,4 +148,4 @@ toolbarbutton.bookmark-item:not(.subviewbutton) {
 }
 
 /* hide bottom left url preview */
-#appcontent statuspanel{display: none;} 
+#appcontent #statuspanel-label{display: none;}
