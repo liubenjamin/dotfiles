@@ -48,10 +48,10 @@ sub on_start {
 sub on_init {
    my ($self) = @_;
    my $commands = {
-     "smaller" => "C-h",
-     "bigger"  => "C-b",
-     "reset"   => "C-j",
-     "show"    => "C-y",
+     "smaller" => "C-j",
+     "bigger"  => "C-k",
+     "reset"   => "C-h",
+     "show"    => "C-i",
    };
    bind_hotkeys($self, $commands);
 
