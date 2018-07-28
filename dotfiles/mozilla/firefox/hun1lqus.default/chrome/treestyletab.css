@@ -44,7 +44,7 @@
 	}
 	100% {
 		width: 350px;
-		height: 350px;
+		height: 351px;
 		opacity: 0;
 		top: calc(50% - 175px);
 		left: calc(50% - 175px);
@@ -123,3 +123,4 @@ background-color: #c9dcff !important;
 	opacity: .4;
         background: #b2b2b2
 }
+
