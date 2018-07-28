@@ -1,13 +1,13 @@
 
 ! basic config
 
-URxvt.font:xft:bitstream vera sans mono:size=9:antialias=true 
+URxvt.font:xft:iosevka:size=14:antialias=true 
 URxvt.scrollBar: false
 URxvt*internalBorder: 50
 
 ! transparency
-! URxvt*depth: 32
-! URxvt*background: rgba:0000/0000/0200/4800
+URxvt*depth: 32
+URxvt*background: rgba:0000/0000/0200/4800
 
 ! extensions
 URxvt.perl-ext-common: default,matcher,resize-font
@@ -24,10 +24,10 @@ URxvt.matcher.rend.0: Uline Bold fg14
 URxvt.iso14755: false
 URxvt.iso14755_52: false
 
-URxvt.keysym.C-h: resize-font:bigger
-URxvt.keysym.C-b: resize-font:smaller
-URxvt.keysym.C-j: resize-font:reset
-URxvt.keysym.C-y: resize-font:show
+URxvt.keysym.C-j: resize-font:smaller
+URxvt.keysym.C-k: resize-font:bigger
+URxvt.keysym.C-h: resize-font:reset
+URxvt.keysym.C-i: resize-font:show
 
 ! copy paste with c-s-c/v
 URxvt.keysym.Shift-Control-V: eval:paste_clipboard
