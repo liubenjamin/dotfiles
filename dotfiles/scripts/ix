@@ -1,0 +1,2 @@
+#!/bin/bash
+curl -n -F 'f:1=<-' ix.io
