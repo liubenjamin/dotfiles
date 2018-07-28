@@ -1,0 +1,9 @@
+xrandr --output HDMI-A-0 --mode 1920x1080 --rate 75
+xrandr --output HDMI-A-0 --mode 2560x1080 --rate 75
+
+exec feh --bg-scale ~/.config/wall.jpg
+killall spotify
+i3-msg 'workspace 10'
+spotify &
+sleep 1 && i3-msg '[class="Spotify"] focus; fullscreen enable'
+sleep 3 && playerctl -p spotify play
