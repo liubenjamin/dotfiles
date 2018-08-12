@@ -1,0 +1,2 @@
+#!/bin/bash
+curl -s -F 'f:1=<-' ix.io | tee >(xclip -selection clipboard)
