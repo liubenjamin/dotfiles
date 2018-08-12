@@ -1,9 +1,9 @@
 [Added Associations]
-text/plain=sublime-text2.desktop;
+text/plain=sublime_text_3.desktop;
 application/x-shellscript=vim.desktop;
 text/css=sublime-text2.desktop;
 application/x-xpinstall=sublime-text2.desktop;
-application/octet-stream=sublime-text2.desktop;
+application/octet-stream=deluge.desktop;sublime-text2.desktop;
 application/x-yaml=sublime-text2.desktop;
 image/jpeg=sxiv.desktop;
 text/x-scheme=sublime-text2.desktop;
@@ -13,3 +13,35 @@ image/png=feh.desktop;
 text/x-python=sublime-text2.desktop;
 text/x-log=sublime-text2.desktop;
 text/x-java=sublime-text2.desktop;vim.desktop;
+x-scheme-handler/http=firefox.desktop;
+x-scheme-handler/https=firefox.desktop;
+x-scheme-handler/ftp=firefox.desktop;
+x-scheme-handler/chrome=firefox.desktop;
+application/x-extension-htm=firefox.desktop;
+application/x-extension-html=firefox.desktop;
+application/x-extension-shtml=firefox.desktop;
+application/xhtml+xml=firefox.desktop;
+application/x-extension-xhtml=firefox.desktop;
+application/x-extension-xht=firefox.desktop;
+image/vnd.djvu+multipage=libreoffice-writer.desktop;
+application/x-raw-disk-image=pcmanfm.desktop;
+application/x-cd-image=pcmanfm.desktop;
+text/vnd.trolltech.linguist=userapp-mpv-EXIKNZ.desktop;
+video/mp4=mpv.desktop;
+
+[Default Applications]
+text/html=firefox.desktop
+x-scheme-handler/http=firefox.desktop
+x-scheme-handler/https=firefox.desktop
+x-scheme-handler/ftp=firefox.desktop
+x-scheme-handler/chrome=firefox.desktop
+application/x-extension-htm=firefox.desktop
+application/x-extension-html=firefox.desktop
+application/x-extension-shtml=firefox.desktop
+application/xhtml+xml=firefox.desktop
+application/x-extension-xhtml=firefox.desktop
+application/x-extension-xht=firefox.desktop
+text/plain=sublime_text_3.desktop
+video/mp4=mpv.desktop
+
+[Removed Associations]
