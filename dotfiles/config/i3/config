@@ -9,14 +9,16 @@ gaps outer 5
 
 exec_always bash ~/.config/startup
 
-exec_always killall polybar; sleep 2 && polybar -c ~/.config/polybar/config.rect main
-# exec_always killall polybar; sleep 1 && polybar -c ~/.config/polybar/config.transparent i3
+exec_always killall polybar; sleep 3 && polybar -c ~/.config/polybar/config main
 exec feh --bg-scale ~/.config/wall.jpg
 
+#exec_always killall spotify; spotify; sleep 3 && playerctl -p spotify play
+exec_always killall spotify
 exec ~/.config/dunst/launch.sh
 
 exec greenclip daemon
-# bindsym $mod+Tab move workspace to output right
+
+# bindsym $mod+Tab exec ~/.scripts/record
 bindsym $mod+F workspace 1; exec firefox
 
 assign [class="Firefox"] workspace 1
@@ -24,12 +26,11 @@ assign [class="Firefox"] workspace 1
 exec_always killall compton
 exec_always sleep 2 && allow_rgb10_configs=false compton --config ~/.config/compton.conf
 
-exec_always i3-msg 'workspace 10; exec spotify; sleep 1 && playerctl -p spotify play'
-exec i3-msg '[class="Spotify" focus; fullscreen enable'
+exec_always i3-msg 'workspace 10; exec spotify; exec sleep 5 && playerctl -p spotify play'
 
-bindsym $mod+slash exec playerctl play-pause
+bindsym $mod+slash exec playerctl next
 bindsym $mod+less exec playerctl previous
-bindsym $mod+greater exec playerctl next
+bindsym $mod+greater exec playerctl play-pause
 
 ## borders
 for_window [class=".*"] border pixel 2
@@ -51,7 +52,7 @@ bindsym $mod+r exec rofi -show run
 bindsym $mod+w exec rofi -show window
 bindsym $mod+s exec maim -s | xclip -selection clipboard -t image/png && notify-send "Copied to clipboard"
 
-bindsym $mod+shift+s exec maim -s | ~/.scripts/0x0.sh | xclip -selection clipboard && notify-send "Uploaded to 0x0.st"
+bindsym $mod+shift+s exec maim -s | ~/.scripts/0x0 | xclip -selection clipboard && notify-send "Uploaded to 0x0.st"
 
 bindsym $mod+space exec rofi -modi "clipboard:greenclip print" -show clipboard -run-command '{cmd}'
 bindsym $mod+Shift+Return workspace 2; exec urxvt -e nvim ~/.config/i3/config
@@ -186,6 +187,12 @@ bindsym $mod+Shift+7 move container to workspace 7
 bindsym $mod+Shift+8 move container to workspace 8
 bindsym $mod+Shift+9 move container to workspace 9
 bindsym $mod+Shift+0 move container to workspace 10
+
+bindsym $mod+ctrl+shift+1 move container to workspace 6
+bindsym $mod+ctrl+shift+2 move container to workspace 7
+bindsym $mod+ctrl+shift+3 move container to workspace 8
+bindsym $mod+ctrl+shift+4 move container to workspace 9
+bindsym $mod+ctrl+shift+5 move container to workspace 10
 
 # reload the configuration file
 bindsym $mod+Shift+c reload
