@@ -1,6 +1,7 @@
 let mapleader=" "
 
 set number
+set relativenumber
 set ruler
 syntax enable
 set showcmd
@@ -33,6 +34,13 @@ nnoremap <leader><Space> zz
 
 nnoremap XX ZQ
 
-set clipboard=unnamedplus
+set clipboard^=unnamedplus,unnamed
+
+" Make Y move like D and C
+noremap Y y$
 
 command W w !sudo tee "%" > /dev/null
+
+" turn on undo files, put them in a common location
+set undofile
+set undodir=~/.vim/_undo/
