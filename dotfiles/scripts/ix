@@ -1,2 +1,2 @@
 #!/bin/bash
-curl -n -F 'f:1=<-' ix.io
+curl -s -n -F 'f:1=<-' ix.io | tee >(xclip -selection clipboard)
