@@ -1,4 +1,4 @@
-; dkudriavtsev/s polybar config
+; based off of dkudriavtsev/s polybar config
 
 [colors]
 background = #00222
@@ -18,7 +18,7 @@ fixed-center = false
 background = ${colors.background}
 foreground = ${colors.foreground}
 
-line-size = 2
+line-size = 1
 line-color = #f00
 
 ; border-size = 10
@@ -32,10 +32,12 @@ module-margin-left = 1
 module-margin-right = 2
 
 font-0 = Source Code Pro:style=Regular:size=9;1
+font-1 = Source Han Sans:style=Regular:size=10;1
+font-2 = Unifont:style=Medium:size=9;1
 
 modules-left = i3
-modules-center =
-modules-right = date cpu memory cputemp filesystem wlan eth battery1 battery2 volume xkeyboard
+modules-center = spotify
+modules-right = date wlan volume
 
 tray-position = right
 tray-padding = 2
@@ -45,29 +47,13 @@ wm-restack = i3
 scroll-up = i3wm-wsnext
 scroll-down = i3wm-wsprev
 
-[module/xkeyboard]
-type = internal/xkeyboard
-blacklist-0 = num lock
-
-label-layout = %layout%
-label-layout-underline = #4527A0
-
-label-indicator-padding = 2
-label-indicator-margin = 1
-label-indicator-background = ${colors.secondary}
-label-indicator-underline = #4527A0
-
-[module/filesystem]
-type = internal/fs
-interval = 25
-
-mount-0 = /
-
-label-mounted = %{F#8a8a8a}%mountpoint%%{F-} %percentage_used%%
-label-unmounted = %mountpoint% not mounted
-label-unmounted-foreground = ${colors.foreground-alt}
-
-format-mounted-underline = #689F38
+[module/spotify]
+type = custom/script
+interval = .01
+format-prefix = " "
+format = <label>
+exec = python ~/.config/polybar/spotify.py -f "♪ {play_pause} {artist} - {song}"
+; format-underline = #1db954
 
 [module/bspwm]
 type = internal/bspwm
@@ -122,26 +108,11 @@ label-urgent = %index%
 label-urgent-background = ${module/bspwm.label-urgent-background}
 label-urgent-padding = ${module/bspwm.label-urgent-padding}
 
-[module/cpu]
-type = internal/cpu
-interval = 2
-format-prefix = "cpu "
-format-prefix-foreground = ${colors.foreground-alt}
-format-underline = #D84315
-label = %percentage%%
-
-[module/memory]
-type = internal/memory
-interval = 2
-format-prefix = "ram "
-format-prefix-foreground = ${colors.foreground-alt}
-format-underline = #EF6C00
-label = %percentage_used%%
-
 [module/wlan]
 type = internal/network
-interface = wlp3s0
+interface = wlp5s0
 interval = 3.0
+format-underline = #1db954
 
 format-connected = wifi <label-connected>
 format-connected-underline = #388E3C
@@ -192,40 +163,32 @@ time-alt = %H:%M:%S
 ;format-prefix = ""
 format = <label>
 ;format-prefix-foreground = ${colors.foreground-alt}
-format-underline = #C62828
+format-underline = #c85eff
 
 label = %date%%time%
 
 [module/volume]
 type = internal/volume
 
-#format-volume = <label-volume>
 format-volume = <label-volume> <bar-volume>
 format-volume-prefix = "%{F#8a8a8a}volume%{F-} "
-;label-volume = volume
-;label-volume = %percentage%%
 label-volume =
 label-volume-foreground = ${colors.foreground}
 
-format-volume-underline = #303F9F
+format-volume-underline = #349BDB
 
 format-muted-prefix = "muted "
 format-muted-foreground = ${colors.foreground-alt}
 label-muted = %percentage%%
 
 bar-volume-width = 10
-bar-volume-foreground-0 = #303F9F
-bar-volume-foreground-1 = #303F9F
-bar-volume-foreground-2 = #303F9F
-bar-volume-foreground-3 = #303F9F
-bar-volume-foreground-4 = #303F9F
-; bar-volume-foreground-0 = #55aa55
-; bar-volume-foreground-1 = #55aa55
-; bar-volume-foreground-2 = #55aa55
-; bar-volume-foreground-3 = #55aa55
-; bar-volume-foreground-4 = #55aa55
-bar-volume-foreground-5 = #f5a70a
-bar-volume-foreground-6 = #ff5555
+bar-volume-foreground-0 = #349BDB
+bar-volume-foreground-1 = #349BDB
+bar-volume-foreground-2 = #349BDB
+bar-volume-foreground-3 = #349BDB
+bar-volume-foreground-4 = #349BDB
+bar-volume-foreground-5 = #349BDB
+bar-volume-foreground-6 = #349BDB
 bar-volume-gradient = false
 bar-volume-indicator = |
 bar-volume-indicator-font = 2
@@ -235,69 +198,8 @@ bar-volume-empty = ─
 bar-volume-empty-font = 2
 bar-volume-empty-foreground = ${colors.foreground-alt}
 
-[module/battery1]
-type = internal/battery
-battery = BAT0
-adapter = AC
-full-at = 98
-
-interval = 2
-
-label-charging = %percentage%%
-label-discharging = %time% %consumption%
-label-full = 100%
-
-format-charging-prefix = "bat "
-format-charging-prefix-foreground = ${colors.foreground-alt}
-format-charging = <animation-charging> <label-charging>
-format-charging-underline = #01579B
-
-format-discharging-prefix = ${self.format-charging-prefix}
-format-discharging = [D] <label-discharging>
-format-discharging-prefix-foreground = ${colors.foreground-alt}
-format-discharging-underline = ${self.format-charging-underline}
-
-format-full-prefix = ${self.format-charging-prefix}
-format-full = [F]
-format-full-prefix-foreground = ${colors.foreground-alt}
-format-full-underline = ${self.format-charging-underline}
-
-ramp-capacity-0 = [0]
-ramp-capacity-1 = [1]
-ramp-capacity-2 = [2]
-ramp-capacity-foreground = ${colors.foreground-alt}
-
-animation-charging-0 = [%{F#990000}C%{F-}]
-animation-charging-1 = [C]
-animation-charging-foreground = ${colors.foreground}
-animation-charging-framerate = 1000
-
-[module/temperature]
-type = internal/temperature
-#thermal-zone = 0
-hwmon-path = /sys/devices/platform/coretemp.0/hwmon/hwmon1/temp1_input
-warn-temperature = 60
-
-format = <label>
-format-warn = <label-warn>
-format-warn-underline = ${self.format-underline}
-
-label = %temperature%
-label-warn = %temperature%
-label-warn-foreground = ${self.format-underline}
-
-format-underline = #F9A825
-format-foreground = ${colors.foreground}
-format-prefix = "temp "
-format-warn-prefix = "temp "
-format-prefix-foreground = ${colors.foreground-alt}
-
 [settings]
 screenchange-reload = true
-;compositing-background = xor
-;compositing-background = screen
-;compositing-foreground = source
-;compositing-border = over
 
 [global/wm]
 margin-top = 5
