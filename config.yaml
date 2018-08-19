@@ -3,9 +3,6 @@ config:
   create: true
   dotpath: dotfiles
 dotfiles:
-  d_bin:
-    dst: ~/.bin
-    src: bin
   d_config:
     dst: ~/.config
     src: config
@@ -37,7 +34,6 @@ profiles:
   arch:
     dotfiles:
     - d_config
-    - d_bin
     - f_userchrome.css
     - f_grub
     - f_hosts
