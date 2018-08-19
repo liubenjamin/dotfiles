@@ -11,7 +11,8 @@ PS1='[\u@\h \W]\$ '
 alias grep="grep --ignore-case --color"
 alias shutdown="pkill spotify && shutdown now"
 alias reboot="pkill spotify && reboot"
-alias lvim='vim -c "normal '\''0"'
+alias vim='nvim'
+alias lvim='nvim -c "normal '\''0"'
 alias pacman="yay"
 
 # append a session's history on shell exit
