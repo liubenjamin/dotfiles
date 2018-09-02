@@ -31,7 +31,7 @@ args = parser.parse_args()
 
 # Default parameters
 output = '{play_pause} {artist}: {song}'
-trunclen = 25
+trunclen = 999
 play_pause = u'\u25B6,\u23F8' # first character is play, second is paused
 
 # parameters can be overwritten by args
