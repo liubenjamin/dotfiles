@@ -13,7 +13,9 @@ alias shutdown="pkill spotify && shutdown now"
 alias reboot="pkill spotify && reboot"
 alias vim='nvim'
 alias lvim='nvim -c "normal '\''0"'
+alias urxvt='urxvt --perl-lib ~/.config/urxvt-ext/ -e bash'
 alias pacman="yay"
+alias dotdrop="~/dotfiles/dotdrop.sh"
 
 # append a session's history on shell exit
 shopt -s histappend

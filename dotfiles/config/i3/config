@@ -46,7 +46,7 @@ client.focused_inactive #151718   #151718   #d0d0d0   #2c2e2f     #2c2e2f
 client.unfocused        #151718   #151718   #d0d0d0   #2c2e2f     #2c2e2f
 client.urgent 		#151718   #151718   #e6cd69   #e6cd69
 
-set $TERMINAL --no-startup-id urxvt --perl-lib ~/.config/urxvt-ext/
+set $TERMINAL --no-startup-id urxvt --perl-lib ~/.config/urxvt-ext/ -e bash
 
 bindsym $mod+r exec rofi -show run
 bindsym $mod+w exec rofi -show window
@@ -62,11 +62,18 @@ bindsym $mod+Shift+BackSpace exec pulseaudio-ctl down 100 && i3lock-fancy -f Bit
 bindsym $mod+shift+a fullscreen disable; floating enable; resize set 425 240; sticky enable; move position 2135 25
 bindsym $mod+a floating toggle 
 
+bindsym $mod+n exec pavucontrol
+
+bindsym $mod+p exec pinta
+
 bindsym $mod+d exec pcmanfm 
+
+bindsym $mod+z exec urxvt --perl-lib ~/.config/urxvt-ext/ -e bash "record"
+
 ## volume
-bindsym $mod+c exec pulseaudio-ctl up
-bindsym $mod+x exec pulseaudio-ctl down
-bindsym $mod+m exec pulseaudio-ctl mute
+#bindsym $mod+c exec pulseaudio-ctl up
+#bindsym $mod+x exec pulseaudio-ctl down
+#bindsym $mod+m exec pulseaudio-ctl mute
 
 # i3 config file (v4)
 #
@@ -169,12 +176,15 @@ bindsym $mod+7 workspace 7
 bindsym $mod+8 workspace 8
 bindsym $mod+9 workspace 9
 bindsym $mod+0 workspace 10
+bindsym $mod+Escape workspace 10
 
 bindsym $mod+ctrl+1 workspace 6
 bindsym $mod+ctrl+2 workspace 7
 bindsym $mod+ctrl+3 workspace 8
 bindsym $mod+ctrl+4 workspace 9
 bindsym $mod+ctrl+5 workspace 10
+
+bindsym $mod+Tab workspace back_and_forth
 
 # move focused container to workspace
 bindsym $mod+Shift+1 move container to workspace 1

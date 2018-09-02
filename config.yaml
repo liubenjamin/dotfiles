@@ -18,6 +18,9 @@ dotfiles:
   f_nanorc:
     dst: ~/.nanorc
     src: nanorc
+  f_prefs:
+    dst: ~/.config/spotify/Users/liu.benjamin-user/prefs
+    src: config/spotify/Users/liu.benjamin-user/prefs
   f_userchrome.css:
     dst: ~/.mozilla/firefox/hun1lqus.default/chrome/userChrome.css
     src: mozilla/firefox/hun1lqus.default/chrome/userChrome.css
@@ -42,3 +45,4 @@ profiles:
     - f_xinitrc
     - f_bashrc
     - f_vimrc
+    - f_prefs
