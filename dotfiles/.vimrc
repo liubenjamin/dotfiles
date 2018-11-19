@@ -36,10 +36,13 @@ nnoremap XX ZQ
 
 set clipboard^=unnamedplus,unnamed
 
-" Make Y move like D and C
+" make Y move like D and C
 noremap Y y$
 
-command W w !sudo tee "%" > /dev/null
+" make d and D go to black hole register (cut by using v/V + x) 
+nnoremap d "_d
+vnoremap d "_d
+nnoremap D "_D
 
 " turn on undo files, put them in a common location
 set undofile

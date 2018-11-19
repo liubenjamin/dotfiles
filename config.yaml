@@ -2,37 +2,47 @@ config:
   backup: true
   create: true
   dotpath: dotfiles
+  keepdot: true
 dotfiles:
   d_config:
     dst: ~/.config
-    src: config
+    src: .config
+  d_scripts:
+    dst: ~/.scripts
+    src: scripts
   f_bashrc:
     dst: ~/.bashrc
-    src: bashrc
+    src: .bashrc
+  f_gdbinit:
+    dst: ~/.gdbinit
+    src: .gdbinit
   f_grub:
     dst: /etc/default/grub
-    src: etc/default/grub
+    src: .etc/default/grub
   f_hosts:
     dst: /etc/hosts
-    src: etc/hosts
+    src: .etc/hosts
+  f_inputrc:
+    dst: ~/.inputrc
+    src: .inputrc
   f_nanorc:
     dst: ~/.nanorc
-    src: nanorc
+    src: .nanorc
   f_prefs:
     dst: ~/.config/spotify/Users/liu.benjamin-user/prefs
-    src: config/spotify/Users/liu.benjamin-user/prefs
+    src: .config/spotify/Users/liu.benjamin-user/prefs
   f_userchrome.css:
     dst: ~/.mozilla/firefox/hun1lqus.default/chrome/userChrome.css
-    src: mozilla/firefox/hun1lqus.default/chrome/userChrome.css
+    src: .mozilla/firefox/hun1lqus.default/chrome/userChrome.css
   f_vimrc:
     dst: ~/.vimrc
-    src: vimrc
+    src: .vimrc
   f_xinitrc:
     dst: ~/.xinitrc
-    src: xinitrc
+    src: .xinitrc
   f_xresources:
     dst: ~/.Xresources
-    src: Xresources
+    src: .Xresources
 profiles:
   arch:
     dotfiles:
@@ -46,3 +56,6 @@ profiles:
     - f_bashrc
     - f_vimrc
     - f_prefs
+    - f_gdbinit
+    - f_inputrc
+    - d_scripts
