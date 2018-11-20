@@ -47,3 +47,16 @@ nnoremap D "_D
 " turn on undo files, put them in a common location
 set undofile
 set undodir=~/.vim/_undo/
+
+" plugins
+
+call plug#begin('~/.config/nvim/plugged')
+
+Plug 'itchyny/lightline.vim'
+Plug 'terryma/vim-multiple-cursors'
+
+Plug '/usr/local/opt/fzf'
+Plug 'junegunn/fzf.vim'
+
+call plug#end()
+
