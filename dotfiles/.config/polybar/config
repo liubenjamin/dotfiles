@@ -50,9 +50,9 @@ scroll-down = i3wm-wsprev
 [module/spotify]
 type = custom/script
 interval = .01
-format-prefix = 
+format-prefix =
 format = %{A1:playerctl -p spotify play-pause:} <label> %{A}
-exec = python ~/.config/polybar/spotify.py -f "♪ {play_pause} {artist} - {song}"
+exec = /usr/bin/python3 ~/.config/polybar/spotify.py -f "♪ {play_pause} {artist} - {song}"
 ; format-underline = #1db954
 
 [module/bspwm]
