@@ -7,6 +7,9 @@
 gaps inner 10
 gaps outer 5
 
+bindsym $mod+b gaps inner current set 0; gaps outer current set 0
+bindsym $mod+v gaps inner current set 10; gaps outer current set 5
+
 exec_always bash ~/.config/startup
 
 exec_always killall polybar; sleep 3 && polybar -c ~/.config/polybar/config main
@@ -19,7 +22,7 @@ exec ~/.config/dunst/launch.sh
 exec greenclip daemon
 
 # bindsym $mod+Tab exec ~/.scripts/record
-bindsym $mod+F workspace 1; exec firefox
+bindsym $mod+F workspace 1; exec google-chrome-stable
 
 assign [class="Firefox"] workspace 1
 
@@ -60,26 +63,27 @@ bindsym $mod+Shift+Return workspace 2; exec urxvt -e nvim ~/.config/i3/config
 bindsym $mod+Shift+BackSpace exec pulseaudio-ctl down 100 && i3lock-fancy -f Bitstream-Vera-Sans-Mono -- scrot -z && pulseaudio-ctl up 100
 
 bindsym $mod+shift+a fullscreen disable; floating enable; resize set 425 240; sticky enable; move position 2135 25
-bindsym $mod+a floating toggle 
+bindsym $mod+a floating toggle
 
 bindsym $mod+n exec pavucontrol
 
+bindsym $mod+g exec krita
 bindsym $mod+p exec pinta
 
-bindsym $mod+d exec pcmanfm 
+bindsym $mod+d exec pcmanfm
 
-bindsym $mod+z exec urxvt --perl-lib ~/.config/urxvt-ext/ -e bash "record"
+bindsym $mod+z exec ~/.scripts/xcqr
 
 ## volume
-#bindsym $mod+c exec pulseaudio-ctl up
-#bindsym $mod+x exec pulseaudio-ctl down
-#bindsym $mod+m exec pulseaudio-ctl mute
+bindsym $mod+c exec pulseaudio-ctl up
+bindsym $mod+x exec pulseaudio-ctl down
+bindsym $mod+m exec pulseaudio-ctl mute
 
 # i3 config file (v4)
 #
 # Please see https://i3wm.org/docs/userguide.html for a complete reference!
 
-set $mod Mod1 
+set $mod Mod1
 
 # Font for window titles. Will also be used by the bar unless a different font
 # is used in the bar {} block below.
@@ -203,6 +207,7 @@ bindsym $mod+ctrl+shift+2 move container to workspace 7
 bindsym $mod+ctrl+shift+3 move container to workspace 8
 bindsym $mod+ctrl+shift+4 move container to workspace 9
 bindsym $mod+ctrl+shift+5 move container to workspace 10
+bindsym $mod+Shift+Escape move container to workspace 10
 
 # reload the configuration file
 bindsym $mod+Shift+c reload
