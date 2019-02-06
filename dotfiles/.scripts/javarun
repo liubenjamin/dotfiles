@@ -2,3 +2,4 @@
 javac $1.java && echo compiled
 java $1 && echo executed
 cat $1.out
+stat -c %y $1.out
